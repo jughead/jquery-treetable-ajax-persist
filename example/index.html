@@ -1,8 +1,9 @@
 <html>
 <head></head>
-<script type="text/javascript" src="../src/javascripts/jquery.treetable-ajax-persist.js" />
-<script type="text/javascript" src="../src/javascripts/jquery.treetable-3.0.0.js" />
-<script type="text/javascript" src="../src/javascripts/persist-min.js" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../src/javascripts/jquery.treetable-ajax-persist.js"></script>
+<script type="text/javascript" src="../src/javascripts/jquery.treetable-3.0.0.js"></script>
+<script type="text/javascript" src="../src/javascripts/persist-min.js"></script>
 <link href="../src/stylesheets/jquery.treetable.css" media="all" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 $(document).ready(function(){
@@ -11,7 +12,8 @@ $(document).ready(function(){
 		loadBranches: true (default: false)
 			To allow autoload branches from outside set true, then
 			you should add to each branch node attribute "data-path", which will be used
-			as url to retrieve table. And if you use loadBranches you should manually set
+			as url to retrieve table. It is supposed that request returns html with table. 
+			And if you use loadBranches you should manually set
 			data-tt-branch to true to each branch node, so that it can be expanded.
 		persist: true (default: false)
 			Allows you to save current state of expanded nodes. You should
@@ -36,11 +38,11 @@ $(document).ready(function(){
 	<tr data-tt-id="3" data-tt-parent-id="3"><td>f3</td><td>123</td></tr>
 	<tr data-tt-id="4"><td>f4</td><td>123</td></tr>
 	<tr data-tt-id="5" data-tt-parent-id="4"><td>f5</td><td>123</td></tr>
-	<tr data-tt-id="6"><td>f6</td><td>123</td></tr>
+	<tr data-tt-id="6" data-tt-parent-id="5"><td>f6</td><td>123</td></tr>
 	<tr data-tt-id="7" data-tt-parent-id="5"><td>f7</td><td>123</td></tr>
-	<tr data-tt-id="8" data-tt-parent-id="6"><td>f8</td><td>123</td></tr>
+	<tr data-tt-id="8" data-tt-parent-id="7"><td>f8</td><td>123</td></tr>
 	<tr data-tt-id="9" data-tt-parent-id="7"><td>f9</td><td>123</td></tr>
-	<tr data-tt-id="10" data-tt-parent-id="1"><td>f10</td><td>123</td></tr>
+	<tr data-tt-id="10" data-tt-parent-id="7"><td>f10</td><td>123</td></tr>
 </tbody>
 
 </table>

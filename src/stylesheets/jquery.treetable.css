@@ -20,9 +20,9 @@ table.treetable span.indenter a {
   width: 19px;
 }
 table.treetable tr.collapsed span.indenter a {
-background-image: url(images/toggle-expand-dark.png);
+background-image: url(../images/toggle-expand-dark.png);
 }
 
 table.treetable tr.expanded span.indenter a {
-background-image: url(images/toggle-collapse-dark.png);
+background-image: url(../images/toggle-collapse-dark.png);
 }
